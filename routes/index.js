@@ -3,8 +3,17 @@ const router = express.Router();
 const passport = require('passport');
 
 router.get('/', function(req, res, next) {
-  res.redirect('/movies');
+  res.render('index', { title: 'Express' });
 });
+
+
+
+
+
+
+
+
+
 
 // Google OAuth login route
 router.get('/auth/google', passport.authenticate(
