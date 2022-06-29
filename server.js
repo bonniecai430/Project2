@@ -16,7 +16,8 @@ require('./config/database');
 require('./config/passport');
 
 var indexRouter = require('./routes/index');
-
+const productsRouter= require('./routes/products')
+const line_itemsRouter= require('./routes/line_items')
 
 var app = express();
 
@@ -30,6 +31,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 app.use(methodOverride('_method'));
+
+
 
 app.use(session({
   secret: process.env.SECRET,
@@ -47,6 +50,8 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', indexRouter);
+app.use('/products', productsRouter);
+app.use('/line_items',line_itemsRouter)
 
 
 // catch 404 and forward to error handler
