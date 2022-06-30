@@ -6,7 +6,7 @@
     </div>
 <form action="/products" method="POST" class="form1">
     <label>Item:</label><br>
-    <select name="item">
+    <select name="item" class="choose">
 <option value="CRÈME BRÛLÉE BOBA MILK TEA">CRÈME BRÛLÉE BOBA MILK TEA</option>
 <option value="Brown Sugar Boba Latte">Brown Sugar Boba Latte</option>
 <option value="Signature Boba Milk Tea">Signature Boba Milk Tea</option>
@@ -16,7 +16,7 @@
 <option value="Watermelon Crystal">Watermelon Crystal</option>
     </select><br>
     <label>Quantity:</label><br>
-    <select name="quantity">
+    <select class="choose" name="quantity">
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -25,7 +25,7 @@
 <option value="6">6</option>
     </select><br>
     <label>Sugar:</label><br>
-    <select name="sugar"><br>
+    <select name="sugar" class="choose"><br>
 <option value="100%">100%</option>
 <option value="70%">70%</option>
 <option value="50%">50%</option>
@@ -33,14 +33,14 @@
 <option value="0">No Sugar</option>
     </select><br>
     <label>Ice:</label><br>
-    <select name="ice">
+    <select name="ice" class="choose">
     <option value="100%">100%</option>
     <option value="80%">80%</option>
     <option value="30%">30%</option>
     <option value="0">No Ice</option>
   </select><br>
     <label for="specialIntruction">Special Intruction:</label><br>
-<input type="text">
+<input type="text" class="choose">
     <br><br>
     <input class="addButton" type="submit" value="Add to cart">
 </form>
