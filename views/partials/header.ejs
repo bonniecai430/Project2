@@ -12,7 +12,12 @@
 <body>
   <nav>
     <a href="/" class="gelato">Summer's Boba</a>
+    <% if (user) { %>
     <a href="/products/new" class="shop">Shop</a>
     <a href="/products" class="cart">Cart</a></spa>
-    <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+    <a href="/logout" class="logout">LOG OUT</a>
+    <% } else { %>
+    
+    <a  href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+    <% } %>
   </nav>

@@ -6,7 +6,8 @@ module.exports={
     index,
     create,
     delete:deleteItem,
-    show
+    show,
+    deleteItems
 }
 
 function addNew(req,res){
@@ -32,11 +33,7 @@ product.save(function(err){
 })
     }
 
-    function deleteItem(req,res){
-        Product.deleteOne(req.params.id)
-            res.redirect('/products')
-        
-    }
+  
 
     function show(req,res){
        Product.findById(req.params.id, function(err, product) {
@@ -45,4 +42,19 @@ product.save(function(err){
                 product
             });
           });
+    }
+
+    function deleteItem(req,res){
+        Product.findByIdAndDelete(req.params.id, function(err){
+            res.redirect('/products')
+        })
+          
+        
+    }
+
+    function deleteItems(req,res){
+        Product.deleteMany({},function(err){
+            res.redirect('/')
+        })
+        
     }

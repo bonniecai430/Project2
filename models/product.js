@@ -12,16 +12,19 @@ const productSchema = new Schema({
     },
     sugar:{
         type:String,
-        default:100
+        default:'100%'
     },
     ice:{
-        type:Number,
-        default:100
+        type:String,
+        default:'100%'
     },
     topping:{
         type:String
     },
-    specialIntruction:String
+    specialIntruction:{
+        type:String,
+        default:'N/A'
+    }
 
 })
 
