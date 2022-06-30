@@ -1,36 +1,30 @@
 <%- include('../partials/header') %>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+    
+            </tr>
+        </thead>
+        <tbody>
+            <%products.forEach(function(product){%>
+                <tr>
+                    <td>
+                        <%=product.item%>
+                    </td>
+                    <td><a href="/products/<%=product._id%>">Detail</a></td>
+                    <td>
+                        <form action="/products/<%= product.id %>?_method=DELETE" 
+                            method="POST">
+            
+                            <button class="removeButton" type="submit">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+                <%})%>
+        </tbody>
+    </table>
 
-
-    <div class="products">
-        <div class="product1">
-            <img src="/images/IMG_1213.jpg"> <br>
-            pistachio <br>
-            <button>Add to cart</button>
-        </div>
-        <div class="product2">
-            <img src="/images/IMG_1214.jpg"> <br>
-            Strawberry <br>
-            <button>Add to cart</button>
-        </div>
-        <div class="product3">
-            <img src="/images/IMG_1215.jpg"> <br>
-            Chocolate <br>
-            <button>Add to cart</button>
-        </div>
-        <div class="product4">
-            <img src="/images/IMG_1216.jpg"> <br>
-            caramel <br>
-            <button>Add to cart</button>
-        </div>
-<div class="product5">
-    <img src="/images/IMG_1217.jpg"> <br>
-      salted caramel <br>
-    <button>Add to cart</button>
-</div>
-</div> 
-    </div>
-
-
-
-
+    <br><br>
+    <button>Checkout</button>
     <%- include('../partials/footer') %>

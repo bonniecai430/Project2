@@ -1,0 +1,51 @@
+<%- include('../partials/header') %>
+
+<div class="select">
+    <div class="order">
+        Order Oneline
+    </div>
+<form action="/products" method="POST" class="form1">
+    <label>Item</label><br>
+    <select name="item">
+<option value="CRÈME BRÛLÉE BOBA MILK TEA">CRÈME BRÛLÉE BOBA MILK TEA</option>
+<option value="Brown Sugar Boba Latte">Brown Sugar Boba Latte</option>
+<option value="Signature Boba Milk Tea">Signature Boba Milk Tea</option>
+<option value="Roasted Oolong Milk Tea">Roasted Oolong Milk Tea</option>
+<option value=" Classic Thai Tea"> Classic Thai Tea</option>
+<option value="Passion Frosty">Passion Frosty</option>
+<option value="Watermelon Crystal">Watermelon Crystal</option>
+    </select><br>
+    <label>Quantity:</label><br>
+    <select name="quantity">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+    </select><br>
+    <label>Sugar</label><br>
+    <select name="sugar"><br>
+<option value="100">100%</option>
+<option value="70">70%</option>
+<option value="50">50%</option>
+<option value="30">30%</option>
+<option value="0">No Sugar</option>
+    </select><br>
+    <label>Ice</label><br>
+    <select name="ice">
+    <option value="100">100%</option>
+    <option value="80">80%</option>
+    <option value="30">30%</option>
+    <option value="0">No Ice</option>
+  </select><br>
+    <label for="specialIntruction">Special Intruction</label><br>
+<input type="text">
+    <br><br>
+    <input class="addButton" type="submit" value="Add to cart">
+</form>
+</div> 
+
+
+
+    <%- include('../partials/footer') %>
