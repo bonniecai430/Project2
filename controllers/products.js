@@ -37,7 +37,6 @@ product.save(function(err){
 
     function show(req,res){
        Product.findById(req.params.id, function(err, product) {
-          
             res.render('products/show',{
                 product
             });
@@ -48,8 +47,7 @@ product.save(function(err){
         Product.findByIdAndDelete(req.params.id, function(err){
             res.redirect('/products')
         })
-          
-        
+    
     }
 
     function deleteItems(req,res){
