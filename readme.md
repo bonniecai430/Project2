@@ -8,7 +8,7 @@ This is a E-Commerce App. User can order their drinks through the website.
 Express NodeJS MongoDB JavaScript CSS HTML
 
 ## Getting Started
-https://project2-boba.herokuapp.com/products
+https://project2-boba.herokuapp.com/
 
 ## Next Steps
 1.When user select the drink they can see the product's picture and price.
